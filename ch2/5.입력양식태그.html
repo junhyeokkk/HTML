@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.입력양식태그</title>
+     <!--
+          날짜 : 2024/07/22
+          이름 : 최준혁
+          내용 : HTML 입력양식태그 실습하기
+    -->
+</head>
+<body>
+    <h3>로그인</h3>
+    <form action="http://google.com" method="get">
+        <table border="1">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="uid"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pass"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="로그인">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <h3>기타입력</h3>
+    <form action="http://google.com" method="get">
+        <h4>취미를 고르세요.</h4>
+        <label><input type="checkbox" name="hobby" value="1">등산</label>
+        <label><input type="checkbox" name="hobby" value="2">여행</label>
+        <label><input type="checkbox" name="hobby" value="3">영화</label>
+        <label><input type="checkbox" name="hobby" value="4">게임</label>
+        <label><input type="checkbox" name="hobby" value="5">운동</label>
+
+        <h4>성별을 고르세요.</h4>
+        <label><input type="radio" name="gender" value="M">남자</label>
+        <label><input type="radio" name="gender" value="F">여자</label>
+
+        <h4>지역을 선택하세요.</h4>
+        <select name="addr">
+            <option>서울</option>
+            <option>대전</option>
+            <option>대구</option>
+            <option>부산</option>
+            <option>광주</option>
+        </select>
+
+        <h4>날짜를 선택하세요.</h4>
+        <input type="date" name="date"/>
+
+        <h4>자기소개</h4>
+        <textarea name="introduce" rows="5" cols="20"></textarea>
+
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>
