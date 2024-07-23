@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.CSS 자손선택자</title>
+    <!--
+          날짜 : 2024/07/22
+          이름 : 최준혁
+          내용 : CSS 자손선택자 실습하기
+    -->
+    <style>
+        /*자식 선택자*/
+        section > h3 {
+            color: blue;
+        }
+        .txt1 > i {
+            color: gray;
+        }
+        .txt2 > i {
+            color: green;
+        }
+        /*후손 선택자*/
+        .txt1 b{
+            background-color: yellow;
+        }
+        .txt2 b{
+            background-color: orange;
+        }
+        /*형제 선택자*/
+        section > h3 + p {
+            border: 1px solid black;
+        } 
+        
+        section > h3 ~ p {
+            background-color: darksalmon;
+        } 
+    </style>
+</head>
+<body>
+    <h3>CSS 자손선택자</h3>
+
+    <section>
+        <h3>애국가</h3>
+        <p class="txt1">
+            동해물과 백두산이 마르고 닳도록<br>
+            하느님이 보우하사 우리나라 만세<br>
+            <i>
+                무궁화 삼천리 화려강산<br>
+                <b>대한사람</b> 대한으로 길이보전하세.
+            </i>
+        </p>
+        <p class="txt2">
+            남산위에 저소나무 철갑을 두른듯<br>
+            하느님이 보우하사 우리나라 만세<br>
+            <i>
+                무궁화 삼천리 화려강산<br>
+                <b>대한사람</b> 대한으로 길이보전하세.
+            </i>
+        </p>
+    </section>
+</body>
+</html>
