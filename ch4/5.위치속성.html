@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.위치속성</title>
+    <!-- 
+        날짜 : 2024/07/24
+        이름 : 최준혁
+        내용 : 글자속성 실습하기
+    -->
+    <style>
+        section {
+            display: inline-block;
+            width: 200px;
+            height: 400px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        section > div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        section > div:nth-of-type(1) {
+            background-color: red;
+        }
+        section > div:nth-of-type(2) {
+            background-color: green;
+        }
+        section > div:nth-of-type(3) {
+            background-color: blue;
+        }
+        /*position:static*/
+        .s1 > div:nth-of-type(1) {
+            position: static;
+        }
+        .s1 > div:nth-of-type(2) {
+            position: static;
+        }
+        .s1 > div:nth-of-type(3) {
+            position: static;
+        }
+        /*position:relative*/
+        .s2 > div:nth-of-type(1){
+            position: relative;
+            left: 10px;
+        }
+        .s2 > div:nth-of-type(2){
+            position: relative;
+            left: 10px; top: 10px;
+  
+        }          
+        .s2 > div:nth-of-type(3){
+            position: relative;
+            right: 10px; bottom: 10px;       
+        }
+        
+        /*position:absolute*/
+        /*자식 absolute시 부모 relative설정 해야함 */
+        .s3 {
+            position: relative;
+        }
+        .s3 > div:nth-of-type(1){
+            position: absolute;
+            right: 10px; top: 10px;
+        }
+        .s3 > div:nth-of-type(2){
+            position: absolute;
+            right: 10px; bottom: 10px;
+        }
+        .s3 > div:nth-of-type(3){
+            position: absolute;
+            left: 10px; bottom: 30px;
+        }
+
+        /*position:fixed*/
+        /*브라우저 화면 기준 관계설정 할 필요 x*/
+        .s4 > div:nth-of-type(1){
+            position: fixed;
+            right: 10px; top: 10px;
+        }
+        .s4 > div:nth-of-type(2){
+            position: fixed;
+            right: 10px; bottom: 10px;
+        }
+        .s4 > div:nth-of-type(3){
+            position: fixed;
+            left: 20px; top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>5.위치속성</h3>
+    
+    <h4>position</h4>
+    <section class="s1">
+        <span>static</span>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="s2">
+        <span>relative</span>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="s3">
+        <span>absolute</span>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="s4">
+        <span>fixed</span>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
