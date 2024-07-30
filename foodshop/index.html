@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>푸드샵::layout</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font: normal 12px '돋음';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+        #wrapper {
+            width: 100%;
+            height: auto;
+            
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: 192px;
+            
+            box-sizing: border-box;
+        }
+        header > div:nth-child(1){
+            width: 100%;
+            height: 36px;
+            
+            box-sizing: border-box;
+        }
+        header > div:nth-child(1) > .top {
+            width: 1100px;
+            height: 35px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .top > p {
+            padding-top: 10px;
+            float: right;
+        }
+        .top > p > a {
+        
+            font: 12px 'note sans korean';
+        }
+        header > div:nth-child(2){
+            width: 100%;
+            height: 100px;
+            
+            box-sizing: border-box;
+        }
+        header > div:nth-child(2) > article {
+            width: 1100px;
+            height: 98px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+            position: relative;
+        }
+        header > div:nth-child(2) > article > a:nth-of-type(1){
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 12px;
+        }
+        header > div:nth-child(2) > article > a:nth-of-type(1) > span:nth-of-type(1){
+            font-size: 15px;
+            color: #ff6a00;
+            font-style: 'note sans korean';
+        }
+        header > div:nth-child(2) > article > a:nth-of-type(2){
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -173px;
+        }
+        header > div:nth-child(2) > article > a:nth-of-type(3){
+            position: absolute;
+            right: 0px;
+            bottom: 20px;
+            margin-left: -173px;
+        }
+        header > div:nth-child(3){
+            width: 100%;
+            height: 54px;
+            
+            box-sizing: border-box;
+            background-color: #40382e;
+        }
+        header > div:nth-child(3) > nav {
+            width: 1100px;
+            height: 52px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        header > div:nth-child(3) > nav > ul {
+           overflow: hidden;
+           width: 100%;
+           height: 100%;
+        }
+        header > div:nth-child(3) > nav > ul > li{
+           float: left;
+           width: 11.11%;
+           height: 100%;
+        }
+        header > div:nth-child(3) > nav > ul > li > a{
+            display: block;
+            font-size: 15px;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-style: 'note sans korean';
+            font-weight: bolder;
+            text-align: center;
+            line-height: 50px;
+        }
+        main {
+            width: 100%;
+            height: auto;
+           
+            box-sizing: border-box;
+        }
+        main > .slider {
+            width: 100%;
+            height: 352px;
+            
+            box-sizing: border-box;
+            background-color: #ffeed4;
+        }
+        .slider > article {
+            width: 1100px;
+            height: 352px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .slider > article > .banner1 > a:nth-of-type(2) > span{
+            font-size: 16px;
+            color: #ff6a00;
+            font-style: 'note sans korean';
+        }
+        main > .go {
+            width: 100%;
+            height: 520px;
+            
+            box-sizing: border-box;
+        }
+        .go > article {
+            width: 1100px;
+            height: 518px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 30px 10px;
+            overflow: hidden;
+        }
+        .go > article > div:nth-child(1) {
+            position: relative;
+            width: 412px;
+            height: 450px;
+            
+            box-sizing: border-box;
+            margin-right: 11px;
+            background: url(./images/main_go_bg1.png);
+        }
+        .go > article > div:nth-child(1) > a {
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        .go > article > div:nth-child(1) > a > span {
+            display: block;
+            font-size: 16px;
+            color: #ff6312;
+            font-style: 'note sans korean';
+            font-weight: bold;
+        }
+        .go > article > div:nth-child(1) > a  > p{
+          
+            font-size: 24px;
+            color: #fcfffd;
+            font-style: 'note sans korean';
+            padding: 10px 0;
+        }
+        .go > article > div:nth-child(1) > a  > p > i{
+            display: block;
+            font-size: 14px;
+            color: #fcfffd;
+            font-style: 'note sans korean';
+            padding-top: 24px;
+ 
+        }
+
+        .go > article > div {
+            float: left;
+            width: 322px;
+            height: 220px;
+           
+            box-sizing: border-box;
+        }
+        .go > article > div:nth-child(2) {
+            position: relative;
+            margin-right: 11px;
+            background: url(./images/main_go_bg2.png);
+        }
+        .go > article > div:nth-child(2) > a {
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        .go > article > div:nth-child(2) > a > span {
+            display: block;
+            font-size: 16px;
+            color: #ff6312;
+            font-style: 'note sans korean';
+            font-weight: bold;
+        }
+        .go > article > div:nth-child(2) > a  > p{
+          
+          font-size: 24px;
+          color: black;
+          font-style: 'note sans korean';
+          padding: 10px 0;
+         }
+        .go > article > div:nth-child(3) {
+            position: relative;
+            background: url(./images/main_go_bg3.png);
+        }
+        .go > article > div:nth-child(3) > a {
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        .go > article > div:nth-child(3) > a > span {
+            display: block;
+            font-size: 16px;
+            color: #ff6312;
+            font-style: 'note sans korean';
+            font-weight: bold;
+        }
+        .go > article > div:nth-child(3) > a  > p{
+          
+          font-size: 24px;
+          color: white;
+          font-style: 'note sans korean';
+          padding: 10px 0;
+         }
+        .go > article > div:nth-child(4) {
+            margin-top: 11px;
+            margin-right: 11px;
+            position: relative;
+            background: url(./images/main_go_bg4.png);
+        }
+        .go > article > div:nth-child(4) > a {
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        .go > article > div:nth-child(4) > a > span {
+            display: block;
+            font-size: 16px;
+            color: #ff6312;
+            font-style: 'note sans korean';
+            font-weight: bold;
+        }
+        .go > article > div:nth-child(4) > a  > p{
+          
+          font-size: 24px;
+          color: white;
+          font-style: 'note sans korean';
+          padding: 10px 0;
+         }
+        .go > article > div:nth-child(5) {
+            margin-top: 11px;
+            position: relative;
+            background: url(./images/main_go_bg5.png);
+        }
+        .go > article > div:nth-child(5) > a {
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        .go > article > div:nth-child(5) > a > span {
+            display: block;
+            font-size: 16px;
+            color: #ff6312;
+            font-style: 'note sans korean';
+            font-weight: bold;
+        }
+        .go > article > div:nth-child(5) > a  > p{
+          
+          font-size: 24px;
+          color: black;
+          font-style: 'note sans korean';
+          padding: 10px 0;
+         }
+        main > .oneday{
+            width: 100%;
+            height: 190px;
+           
+            box-sizing: border-box;
+            background: url(./images/oneday_bg.png);
+            background-size: cover;
+            background-position: 50% center;
+        }
+        .oneday > article {
+            width: 1100px;
+            height: 188px;
+           
+            box-sizing: border-box;
+            margin: 0 auto;
+            
+        }
+        .oneday > article > a > img {
+            padding-top: 50px;
+        }
+        main > .vegetable {
+            width: 100%;
+            height: 660px;
+           
+            box-sizing: border-box;
+        }
+        .vegetable > article {
+            width: 1100px;
+            height: 658px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 60px 0px 40px;
+            text-align: center;
+        }
+        .vegetable > article > ul {
+            width: 100%;
+            height: auto;
+            
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .vegetable > article > ul > li {
+            float: left;
+            width: 25%;
+            height: 100%;
+            
+            box-sizing: border-box;
+            background-size: cover;
+           
+        }
+        .vegetable > article > ul > li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .vegetable > article > ul > li > a >img {
+            width: 100%;
+            height: 170px; 
+            object-fit: cover;
+        }
+        .vegetable > article > ul > li > a > h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #41392f;
+            margin-top: 12px;
+        }
+        .vegetable > article > ul > li > a > p {
+            font-size: 13px;
+            font-weight: bold;          
+            color: #959595;
+            margin: 12px 0 26px;
+        }
+        .vegetable > article > ul > li > a > h2 {
+            font-size: 20px;
+            font-weight: bold;          
+            color: #ff6a00;
+        }
+        .vegetable > article > a {
+            display: block;
+            width: 300px;
+            height: 50px;
+           
+            box-shadow: 0px 2px 2px #999;
+            text-align: center;
+            line-height: 50px;
+            margin: 56px auto 0;            
+            color: #626262;
+            font-size: 15px;
+            font-weight: bold;
+        } 
+        main > .premium {
+            width: 100%;
+            height: 200px;
+            
+            box-sizing: border-box;
+            background-image: url('./images/premium_bg.png');
+            background-size: cover;
+            background-position: 50% center;
+        }
+        .premium > article {
+            width: 1100px;
+            height: 198px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+            text-align: center;            
+        }
+        .premium > article > a > img {
+            margin-top: 52px;
+        }
+        main > .seefood {
+            width: 100%;
+            height: 660px;
+            
+            box-sizing: border-box;
+        }
+        .seefood > article {
+            width: 1100px;
+            height: 658px;
+            
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 60px 0px 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .seefood > article > ul {
+            overflow: hidden;
+            
+            box-sizing: border-box;
+        }
+        .seefood > article > ul >li{
+            float: left;
+            width: 274px;
+            height: 310px;
+            
+            box-sizing: border-box;
+        }
+        .seefood > article > a {
+            display: block;
+            width: 300px;
+            height: 50px;
+           
+            box-shadow: 0px 2px 2px #999;
+            text-align: center;
+            line-height: 50px;
+            margin: 56px auto 0;            
+            color: #626262;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        main .thumb_rolling {            
+            width: 100%;
+            height: 312px;
+            margin-top: 36px;            
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main .thumb_rolling > li {
+            float: left;            
+            top: 0px;
+            width: 25%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        
+        main .thumb_rolling > li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        main .thumb_rolling > li img {
+            width: 100%;
+            height: 170px; 
+            object-fit: cover;
+        }
+
+        main .thumb_rolling > li h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #41392f;
+            margin-top: 12px;
+        }
+        main .thumb_rolling > li p {
+            font-size: 13px;
+            font-weight: bold;          
+            color: #959595;
+            margin: 12px 0 26px;
+        }
+        main .thumb_rolling > li h2 {
+            font-size: 20px;
+            font-weight: bold;          
+            color: #ff6a00;
+        }
+        footer {
+            width: 100%;
+            height: auto;
+        }
+
+        footer > div {
+            width: 100%;
+        }
+
+        footer > div:nth-child(1) {
+            height: 50px;
+            background-color: #626262;
+        }
+
+        footer > div:nth-child(2) {
+            height: 156px;           
+            background-color: #434343; 
+        }
+
+        footer > div > div {
+            width: 1100px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        footer .terms {   
+            float: left;         
+            margin-top: 14px;
+            color: #eee;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        footer .terms > a {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+        footer .terms > a:first-child {color: #ff6a00;}
+
+        footer .info {
+            float: left;
+            margin-top: 16px;
+            color: #aca9a9;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 26px;
+        }
+
+        footer .tel {            
+            float: right;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div>
+                <div class="top">
+                    <p>
+                        <a href="#">로그인 |</a>
+                        <a href="#">마이페이지 |</a>
+                        <a href="#">관심상품(0) |</a>
+                        <a href="#">장바구니(0)</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <article>
+                    <a href="#">
+                        <img src="./images/ico_shopping.png" alt="">
+                        <span>SHOPPING</span>
+                        <span>주문조회 바로가기</span>
+                    </a>    
+                    <a href="#">
+                        <img src="./images/header_txt_logo.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./images/header_txt_onday.png" alt="">
+                    </a>
+                </article>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                    <li><a href="#">채소/과일/곡류</a></li>
+                    <li><a href="#">수산</a></li>
+                    <li><a href="#">정육/달걀</a></li>
+                    <li><a href="#">면/양념/소스</a></li>
+                    <li><a href="#">음료/주류</a></li>
+                    <li><a href="#">냉장/냉동식품</a></li>
+                    <li><a href="#">캔/통조림</a></li>
+                    <li><a href="#">가공/간편식품</a></li>
+                    <li><a href="#">생활잡화</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="slider">
+                <article>
+                    <a href="#">
+                        <img src="./images/slider_banner1.jpg" alt="">
+                    </a>
+                </article>
+            </section>
+            <section class="go">
+                <article>
+                    <div class="banner1">
+                        <a href="#">
+                            <span>생활야채</span>
+                            <p>1일 1야채<br>
+                            건강한 생활습관<br>
+                                <i>
+                                아삭아삭 건강에도 좋은<br> 
+                                야채를 1일 1야채로 생활에<br>
+                                활기를 느껴보세요! 
+                                </i>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="banner2">
+                        <a href="#">
+                            <span>특별이벤트</span>
+                            <p>SHOP에서 진행하는<br>
+                            특별이벤트!<br>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="banner3">
+                        <a href="#">
+                            <span>하루할인</span>
+                            <p>오늘의<br>
+                            할인상품!<br>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="banner4">
+                        <a href="#">
+                            <span>프리미엄</span>
+                            <p>SHOP에서 인증하는<br>
+                            프리미엄 상품<br>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="">
+                        </a>
+                    </div>
+                    <div class="banner5">
+                        <a href="#">
+                            <span>인기상품</span>
+                            <p>SHOP의<br>
+                            인기상품<br>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="">
+                        </a>
+                    </div>
+                    
+                </article>
+            </section>
+            <section class="oneday">
+                <article>
+                    <a href="#">
+                        <img src="./images/oneday_txt.png" alt="">
+                    </a>
+                </article>
+            </section>
+            <section class="vegetable">
+                <article>
+                    <img src="./images/vegetable_tit.png" alt="">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb1.jpg" alt="">
+                                <h1>플레인요거트 4개입</h1>
+                                <p>견과류, 과일과 같이 먹는 플레인 요거트</p>
+                                <h2>7,500원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb2.jpg" alt="">
+                                <h1>프랑스 더치커피</h1>
+                                <p>프랑스만의 방식으로 내려진 더치커피</p>
+                                <h2>5,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb3.jpg" alt="">
+                                <h1>로얄밀크 홍차</h1>
+                                <p>일본에서 온 깊고 풍부한맛의 로얄밀크티</p>
+                                <h2>17,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb4.jpg" alt="">
+                                <h1>스위스 핫초코 320g</h1>
+                                <p>스위스에서 온 핫초코로 따뜻한 연말</p>
+                                <h2>4,000원</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#">전체 상품 보기</a>
+
+                </article>
+            </section>
+            <section class="premium">
+                <article>
+                    <a href="#"><img src="./images/main_premium_tit.png" alt="프리미엄 상품소개"></a>
+                </article>
+            </section>
+            <section class="seefood">
+                <article>
+                    <img src="./images/seafood_tit.png" alt="신선하고 담백한 해산물"/>
+                    <ul class="thumb_rolling">
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb1.jpg" alt="플레인요거트">
+                                <h1>플레인요거트 4개입</h1>
+                                <p>견과류, 과일과 같이 먹는 플레인 요거트</p>
+                                <h2>7,500원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb2.jpg" alt="플레인요거트">
+                                <h1>프랑스 더치커피</h1>
+                                <p>프랑스만의 방식으로 내려진 더치커피</p>
+                                <h2>5,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb3.jpg" alt="플레인요거트">
+                                <h1>로얄밀크 홍차</h1>
+                                <p>일본에서 온 깊고 풍부한맛의 로얄밀크티</p>
+                                <h2>17,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb4.jpg" alt="플레인요거트">
+                                <h1>스위스 핫초코 320g</h1>
+                                <p>스위스에서 온 핫초코로 따뜻한 연말</p>
+                                <h2>4,000원</h2>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="all">전체 상품 보기</a>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div>
+                    <p class="terms">
+                        <a href="#">이용약관</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">이용안내</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">개인정보취급방침</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p class="info">
+                        상호명 : 쇼핑몰&nbsp;&nbsp;&nbsp;대표 : 홍길동&nbsp;&nbsp;&nbsp;메일 : master@foodshop.com<br/>
+                        통신판매업신고번호 : 123-456-7890&nbsp;&nbsp;&nbsp;사업자등록번호 : 123-45-7890&nbsp;&nbsp;&nbsp;대표번호 : 070-1234-5678<br/>
+                        팩스번호 : 051-1234-5678&nbsp;&nbsp;&nbsp;개인정보관리자 : 김유신&nbsp;&nbsp;&nbsp;주소 : 부산시 부산진구 서전로 123
+                    </p>
+                    <img src="./images/footer_tel.png"  class="tel" alt="365 고객센터">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
